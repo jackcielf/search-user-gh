@@ -1,0 +1,17 @@
+<div class="search__container">
+  <div>
+    <h1>Procure seu perfil</h1>
+    <form autocomplete="off" class="form" (submit)="onSubmit()">
+      <input
+        type="text"
+        placeholder="Username"
+        name="nickname"
+        [(ngModel)]="nickname"
+        />
+      <input
+        type="submit"
+        value="Procurar"
+      />
+    </form>
+  </div>
+</div>

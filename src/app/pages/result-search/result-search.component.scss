@@ -1,0 +1,103 @@
+.perfil__box {
+  width: 410px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+  gap: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+
+  .id__repos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .name__user {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .login {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+  }
+
+  .bio {
+    padding: 5px;
+    border-style: dotted;
+  }
+
+  .followers_in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.msg {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.voltar {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.voltar_noFind {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #0066ff;
+  margin-top: 2rem;
+  border-radius: 10px;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.load {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #0000 10%,
+    #0066ff
+  );
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .perfil__box {
+    width: 95%;
+    margin: 0 auto;
+  }
+}

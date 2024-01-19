@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.cdnfonts.com/css/mona-sans");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mona-Sans", sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.card__container,
+.search__container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgb(13, 9, 75) -50%, #000);
+  display: grid;
+  place-items: center;
+  color: #e1e1e1;
+}

@@ -1,0 +1,40 @@
+<div class="card__container">
+  <div class="load" *ngIf="loading; else content"></div>
+
+  <ng-template #content>
+    <div *ngIf="userdata; else error">
+      <div *ngIf="userdata.login; else semResultados">
+        <div class="perfil__box">
+          <div class="id__repos">
+            <span><strong>ID:</strong> {{ userdata.id }} </span>
+            <span>
+              <strong>REPOS:</strong>
+              {{ userdata.public_repos + userdata.public_gists }}
+            </span>
+          </div>
+          <img src="{{ userdata.avatar_url }}" />
+          <div class="name__user">
+            <p>{{ userdata.name }}</p>
+            <p class="login">{{ userdata.login }}</p>
+          </div>
+          <p class="bio">{{ userdata.bio }}</p>
+          <p><strong>Formação:</strong> {{ userdata.company }}</p>
+          <p><strong>Origem:</strong> {{ userdata.location }}</p>
+          <div class="followers_in">
+            <span>{{ userdata.followers }} followers</span> |
+            <span>{{ userdata.following }} following</span>
+          </div>
+        </div>
+        <p class="voltar" routerLink="/">Voltar</p>
+      </div>
+
+      <ng-template #semResultados>
+        <p class="msg">Usuário não encontrado!</p>
+        <p class="voltar_noFind" routerLink="/">Voltar</p>
+      </ng-template>
+    </div>
+    <ng-template #error>
+      <p class="msg">Erro ao carregar!</p>
+    </ng-template>
+  </ng-template>
+</div>
